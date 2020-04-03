@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID</title>
+
+<style type="text/css">
+    
+h1 {
+    
+   
+    color: green;
+}
+h2{
+    color: green;
+}
+
+.bt{
+    background-color: white;
+}
+main{
+    margin-left: 50px;
+}
+
+.ft{
+text-align: center;
+color: blue;
+}
+body{
+    height: 100vh;
+   background-image: url("https://images.unsplash.com/photo-1584937248081-634bb38393fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+   background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    
+}
+
+@media (max-width: 768px){
+    .body{
+       width: 100%;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+     </head>
+
+<main>
+
+<body>
+    
+<h1>COVID 19 TRACKER</h1>
+<P>Due to limited Test kit needed to combat
+COVID-19, we made this Platform to 
+provide you with a means of self examining 
+yourself before contacting NCDC</P>
+<h2>It will only take a moment to answer 
+some questions so as to provide you with 
+best analysis provided 
+by NCDC guildlines.</h2> Please fill the form below. <br> <br>
+
+    <form  id="re">
+    
+<script type="text/javascript">
+ var name = prompt("Please enter your full name")
+alert("Welcome" + " " + "" + name);
+
+</script>
+ <br><br> <label for="Email"><b>Email</b></label>
+    <input type="text" placeholder="Enter your email" name="Email" required>
+
+<br><br> <label for="age">Age</label>
+<input type="number" name="" min="10" max="200"   required >
+
+
+   <br> <br> <label for="">Do you have cough?</label>
+         
+         <input type="radio" name="cough" id="c"   value="yes"  required> Yes
+         <input type="radio" name="cough" id="c"  value="no"  required> No
+
+<br> <br> <label for="">Do you have cold?</label>
+        <input type="radio" name="cold" id="o"  value="yes"  required> Yes
+         <input type="radio" name="cold" id="o" value="no"  required> No
+
+
+
+<br> <br> <label for="">Do you have Diarhea?</label>
+         
+         <input type="radio" name="Diarhea" id="d"   value="yes"  required> Yes
+         <input type="radio" name="Diarhea" id="d" value="no" required> No
+
+
+<br> <br> <label for="">Do you have sore throat?</label>
+         
+         <input type="radio" name="throat" id="t"  value="yes"  required> Yes
+         <input type="radio" name="throat" id="t" value="no"  required> No
+
+
+<br> <br> <label for="">Are you experiencing Body Aches?</label>
+         
+         <input type="radio" name="Aches" id="a"  value="yes"  required> Yes
+         <input type="radio" name="Aches" id="a" value="no"  required> No
+
+
+<br> <br> <label for="">Do you have Headache?</label>
+         
+         <input type="radio" name="Headache" id="h"  value="yes"  required> Yes
+         <input type="radio" name="Headache" id="h" value="no"  required> No
+
+<br> <br> <label for="">Do you have fever (above 37.8C)?</label>
+         
+         <input type="radio" name="Fever" id="f"  value="yes"  required> Yes
+         <input type="radio" name="Fever" id="f" value="no"  required> No
+
+
+<br> <br> <label for="">Do you have difficulty breathing?</label>
+         
+         <input type="radio" name="breathing" id="b"  value="yes" required> Yes
+         <input type="radio" name="breathing" id="b" value="no" required> No
+
+
+<br> <br> <label for="">Are you experiencing Fatigue?</label>
+         
+         <input type="radio" name="Fatigue" id="g"  value="yes" checked required> Yes
+         <input type="radio" name="Fatigue" id="g" value="no" checked required> No
+
+
+<br> <br> <label for="">Have you travelled recently during the past 14days?</label>
+         
+         <input type="radio" name="Travell" id="t"  value="yes" checked required> Yes
+         <input type="radio" name="Travell" id="t" value="no" checked required> No
+
+<br> <br> <label for="">Do you have a travel hisory to a COVID-19 INFECTED AREA?</label>
+         
+         <input type="radio" name="Infected" id="i"  value="yes" checked required> Yes
+         <input type="radio" name="Infected" id="i" value="no" checked required> No
+<br><br>
+
+<button  class="bt"  onclick="confirm();">   Submit</button>  <br> <br>
+<button class="bt" type="reset" value="reset" form="re" >  Reset </button>
+
+</form>
+
+
+ 
+
+
+<script type="">
+    
+function confirm(){
+
+var Cough = document.getElementsByName("cough");
+var Cold = document.getElementsByName("cold");
+var Diarhea = document.getElementsByName("Diarhea");
+var Throat = document.getElementsByName("throat");
+var Aches = document.getElementsByName("Aches");
+var Headache= document.getElementsByName("Headache");
+var Fever = document.getElementsByName("Fever");
+var Breathing = document.getElementsByName("breathing");
+var Fatigue  =  document.getElementsByName("Fatigue");
+var Travell = document.getElementsByName("Travell");
+var Infected = document.getElementsByName("Infected");
+
+if(Cough[0].checked && Cold[0].checked && Diarhea[0].checked && Throat[0].checked && Aches[0].checked
+    && Headache[0].checked && Fever[0].checked && Breathing[0].checked && Fatigue[0].checked
+    && Travell[0].checked && Infected[0].checked ){
+        alert("Recommendations: You have a high risk of having been infected with COVID-19, please call the NCDC toll-free Number 0800-9700-0010, or whatsapp 07087110839.");
+    }
+
+else if(Cough[1].checked && Cold[1].checked && Diarhea[1].checked && Throat[1].checked && Aches[1].checked
+    && Headache[1].checked && Fever[1].checked && Breathing[1].checked && Fatigue[1].checked
+    && Travell[1].checked && Infected[1].checked ){
+alert("Recommendations: Please visit the nearest hospital for some check up")
+}
+
+else if(Cough[1].checked || Cold[0].checked || Diarhea[1].checked || Throat[0].checked || Aches[1].checked
+    && Headache[0].checked || Fever[1].checked || Breathing[0].checked || Fatigue[1].checked
+    && Travell[0].checked || Infected[1].checked ){
+alert("Recommendations: Please stay at home and self isolate to avoid getting infected")
+}
+else if(Cough[1].checked && Cold[1].checked && Diarhea[1].checked && Throat[1].checked && Aches[1].checked
+    && Headache[0].checked && Fever[0].checked && Breathing[0].checked && Fatigue[0].checked
+    && Travell[0].checked && Infected[0].checked ){
+alert("Recommendations: Seek a consultation with a medical Doctor as soon as possible")
+}
+
+else{
+    alert("Recommendations: You may want to take the test again!")
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="ft">  &#169 FEMITOSIN 2020  </footer>
+
+
+
+
+</body>
+</main>
+</html>
